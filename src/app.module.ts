@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import * as process from 'node:process';
 import { Board } from './boards/boards.entity';
 import { ConfigModule } from '@nestjs/config';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { ConfigModule } from '@nestjs/config';
       synchronize: true, // 개발 환경에서만 사용
     }),
     BoardsModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
